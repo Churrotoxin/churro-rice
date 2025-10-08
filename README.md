@@ -25,6 +25,8 @@ running on debian 12 :]
 
 [E-v2020-green cursor](https://www.pling.com/p/2092230)
 
+[HaikuOS icon set](https://www.pling.com/p/2087825)
+
 ## credit
 
 based on [diinki retrofuture](https://github.com/diinki/diinki-retrofuture) & their amazing [tutorial](https://inv.nadeko.net/watch?v=jFz5gLqv-FM)
