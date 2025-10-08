@@ -1,0 +1,3 @@
+; vars
+
+(defpoll FORTUNE :interval "1h" '~/.config/eww/scripts/fortune.sh')
