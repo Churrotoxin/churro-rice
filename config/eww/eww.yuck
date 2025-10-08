@@ -1,0 +1,12 @@
+(include "eww_widgets.yuck")
+
+(defwindow powermenu
+  :monitor '[0]'
+  :stacking "fg"
+  :namespace "eww"
+  :geometry (geometry
+    :x "0"
+    :y "0"
+    :anchor "bottom left")
+  (powermenu)
+)
