@@ -21,7 +21,7 @@ running on debian 12 :]
 
 ## GTK theme & Cursor
 
-[Skewaita GTK3/4 theme](https://www.pling.com/p/1768839)
+[Skewaita GTK3/4 theme](https://www.pling.com/p/1768839)  (Using the matrix colour palette)
 
 [E-v2020-green cursor](https://www.pling.com/p/2092230)
 
