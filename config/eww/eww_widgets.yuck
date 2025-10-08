@@ -1,0 +1,28 @@
+(include "eww_vars.yuck")
+
+(defwidget powermenu []
+  (centerbox :height "68" :width "600" :halign "center" :valign "center" :class "parent"
+    (box :height "32" :width "144" :halign "center" :valign "center"
+      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
+        (button :onclick "systemctl poweroff" :class "poweroff-button"
+          (label :class "icon-label"  :text "⏻")
+        )
+      )
+      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
+        (button :onclick "systemctl suspend"  :class "suspend-button"
+          (label :class "icon-label"  :text "⏾")
+        )
+      )
+      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
+        (button :onclick "swaymsg reload"  :class "refresh-button"
+          (label :class "icon-label"  :text "↺")
+        )
+      )
+    )
+    (box :height "32" :width "0" :halign "center" :valign "center" 
+    )
+    (box :height "32" :width "452" :halign "center" :valign "center" 
+      (label :class "flavour-text" :text FORTUNE)
+    )
+  )
+)
