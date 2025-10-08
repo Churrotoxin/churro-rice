@@ -16,11 +16,13 @@ running on debian 12 :]
 ## font
 
 [Anomaly Mono](https://github.com/benbusby/anomaly-mono)
+
 [fonts-font-awesome](https://packages.debian.org/sid/fonts-font-awesome) (waybar icons)
 
 ## GTK theme & Cursor
 
 [Skewaita GTK3/4 theme](https://www.pling.com/p/1768839)
+
 [E-v2020-green cursor](https://www.pling.com/p/2092230)
 
 ## credit
