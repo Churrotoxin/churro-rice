@@ -9,6 +9,7 @@
   "position": "bottom",
   "modules-left": [
     "custom/applauncher",
+    "custom/notification",
     "sway/workspaces"
   ],
   "modules-center": [
@@ -25,6 +26,22 @@
     "format": "",
     "on-click": "eww open powermenu && pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun && eww close powermenu",
     "tooltip": false
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon} {0}",
+    "format-icons": {
+          "notification": "<span foreground='#fc4649'></span>",
+          "none": "",
+          "dnd-notification": "<span foreground='#fc4649'></span>",
+          "dnd-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   },
   "sway/workspaces": {
     "disable-scroll": true,
