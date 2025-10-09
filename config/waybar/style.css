@@ -1,6 +1,6 @@
 * {
     font-family: Anomaly Mono;
-    font-size: 22px;
+    font-size: 20px;
     padding: 0px;
     background: transparent;
 }
@@ -12,8 +12,13 @@ window#waybar {
 
 #battery,
 #network,
+#cpu,
+#memory,
+#temperature,
+#backlight,
 #clock,
 #custom-applauncher,
+#custom-notification,
 #tray,
 #workspaces,
 #pulseaudio {
@@ -27,50 +32,34 @@ window#waybar {
   border-style: none;
   border-top: 1px solid #50a450;
   border-radius: 4px;
-  transition-duration: 120ms;
 }
 
 #clock {
   margin-right: 6px;
 }
 
-#pulseaudio:hover {
-  background-image: linear-gradient(to bottom, #ac82e9 100%);
-  color: #141216;
-  transition-duration: 120ms;
-}
-
-#custom-applauncher {
-  font-weight: bold;
-  transition-duration: 120ms;
-}
-#custom-applauncher:hover {
-  background-image: linear-gradient(to bottom, #fc4649 100%);
-  color: #00FF00;
-  transition-duration: 120ms;
-}
-
 #window {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #tray menu {
-  background-color: #141216;
+  background-color: #000000;
   color: #00FF00;
   padding: 4px;
 }
 #tray menu menuitem {
-  background-image: linear-gradient(to bottom, #27232b 100%);
+  background-image: linear-gradient(to bottom, #004E00, #004400);
 
   margin: 3px;
   color: #00FF00;
   border-radius: 4px;
-  border-style: solid;
-  border-color: #27232b;
+  border-style: none;
+  border-top: 1px solid #50a450;
 }
 #tray menu menuitem:hover {
   background-image: linear-gradient(to bottom, #27232b 100%);
   color: #fc4649;
+  border-top: 1px solid #fc4649;
   font-weight: bold;
 }
 
@@ -100,10 +89,6 @@ window#waybar {
   color: #fcb167;
 }
 
-#battery {
-  background-color: #222222;
-  color: #00FF00;
-}
 #battery.warning,
 #battery.critical,
 #battery.urgent {
