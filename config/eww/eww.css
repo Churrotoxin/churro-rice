@@ -1,26 +1,40 @@
-.parent {
-  border-radius: 0px 0px 6px 6px;
+* {
+  background: transparent;
+}
 
-  border-width: 0px 1px 1px 1px;
-  border-style: solid;
+.parent {
+  background-image: linear-gradient(to bottom, #8e3333, #692626);
+  border-radius: 2px;
+  border: 1px solid #271e1e;
+  padding: 0px 6px;
 }
 .child {
-  margin-left: 6px;
+  background: #271e1e;
+  border-radius: 1px;
 }
 .icon-label {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: normal;
 }
-.poweroff-button {
-  padding: 8px 0px 0px 0px;
+.button {
+  padding: 10px 0px;
 }
-.suspend-button {
-  padding: 8px 0px 0px 0px;
+.button.short {
+  padding: 12px 0px;
 }
-.refresh-button {
-  padding: 11px 0px;
+.button.tall {
+  padding: 2px 0px 10px 0px;
 }
-.flavour-text {
-  font-size: 18px;
-  font-family: "Anomaly Mono";
+
+.shutdown {
+  background: linear-gradient(to bottom, #CC0000, #660000); /* pastel darken 0.2 */
+}
+.restart {
+  background: linear-gradient(to bottom, #BA7B3E, #5a371e);
+}
+.suspend {
+  background: linear-gradient(to bottom, #1F5FAA, #0000CC);
+}
+.logout {
+  background: linear-gradient(to bottom, #009933, #004d1a); /* pastel darken 0.1 */
 }
