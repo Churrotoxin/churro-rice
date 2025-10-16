@@ -1,13 +1,28 @@
 * {
     font-family: Anomaly Mono;
-    font-size: 20px;
     padding: 0px;
     background: transparent;
 }
 
 window#waybar {
-    background-image: linear-gradient(to bottom, #002000, #000F00);
     padding: 0px;
+}
+
+window#waybar,
+tooltip,
+#battery *,
+#network *,
+#cpu *,
+#memory *,
+#temperature *,
+#backlight *,
+#clock *,
+#custom-applauncher *,
+#custom-notification *,
+#tray *,
+#workspaces *,
+#pulseaudio * {
+    font-size: 20px;
 }
 
 #battery,
@@ -22,15 +37,9 @@ window#waybar {
 #tray,
 #workspaces,
 #pulseaudio {
-  background-image: linear-gradient(to bottom, #004E00, #004400);
-
-  margin: 6px;
+  margin: 4px 6px;
   margin-right: 0px;
-  padding: 4px 8px;
-  color: #00FF00;
-
-  border-style: none;
-  border-top: 1px solid #50a450;
+  padding: 6px 8px;
   border-radius: 4px;
 }
 
@@ -43,23 +52,14 @@ window#waybar {
 }
 
 #tray menu {
-  background-color: #000000;
-  color: #00FF00;
   padding: 4px;
 }
 #tray menu menuitem {
-  background-image: linear-gradient(to bottom, #004E00, #004400);
-
   margin: 3px;
-  color: #00FF00;
   border-radius: 4px;
   border-style: none;
-  border-top: 1px solid #50a450;
 }
 #tray menu menuitem:hover {
-  background-image: linear-gradient(to bottom, #27232b 100%);
-  color: #fc4649;
-  border-top: 1px solid #fc4649;
   font-weight: bold;
 }
 
@@ -68,30 +68,132 @@ window#waybar {
   all: initial;
   min-width: 0;
   font-weight: bold;
-  color: #00FF00;
   margin-right: 0.2cm;
   margin-left: 0.2cm;
 }
 
 #workspaces button:hover {
   transition-duration: 120ms;
-  color: #fc4649;
 }
 #workspaces button.focused {
-  color: #fc4649;
   font-weight: bold;
 }
 #workspaces button.active {
-  color: #fc4649;
   font-weight: bold;
 }
+
+/* =========================== */
+
+window#waybar {
+    background-image: linear-gradient(to bottom, #8e3333, #692626);
+}
+
+tooltip {
+  background-image: linear-gradient(to bottom, #5a371e);
+}
+
+#battery,
+#network,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#clock,
+#custom-applauncher,
+#custom-notification,
+#tray,
+#workspaces,
+#pulseaudio {
+  background-image: linear-gradient(to bottom, #602222, #602222, #3a1515);
+  border: 1px solid #271e1e;
+  border-top: 1px solid #876060;
+  box-shadow: 0px 0px 3px #271e1e;
+  color: #ffffff;
+}
+
+#custom-applauncher,
+#network {
+  background: linear-gradient(to bottom, #1F5FAA, #0000CC);
+}
+
+#clock,
+#temperature {
+  background: linear-gradient(to bottom, #CC0000, #660000);
+}
+
+#battery,
+#cpu {
+  background: linear-gradient(to bottom, #009933, #004d1a);
+}
+
+#pulseaudio,
+#memory {
+  background: linear-gradient(to bottom, #BA7B3E, #5a371e);
+}
+
+#backlight {
+  background: linear-gradient(to bottom, #0099CC, #1F5FAA);
+}
+
+/*
+#backlight {
+  background: linear-gradient(to bottom, #ffffff, #a7a7a7);
+  color: #271e1e;
+}
+
+#battery:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#backlight:hover,
+#clock:hover,
+#custom-applauncher:hover,
+#custom-notification:hover,
+#tray:hover,
+#workspaces:hover,
+#pulseaudio:hover {
+  background-image: linear-gradient(to bottom, #cc0000, #cc0000, #602222);
+  border: 1px solid #271e1e;
+  border-top: 1px solid #876060;
+  box-shadow: 0px 0px 3px #271e1e;
+  color: #ffffff;
+}
+*/
+#window {
+  color: #a7a7a7;
+}
+
+#tray menu {
+  background-image: linear-gradient(to bottom, #8e3333, #692626);
+}
+#tray menu menuitem {
+  background-image: linear-gradient(to bottom, #602222, #602222, #3a1515);
+  border: 1px solid #271e1e;
+  border-top: 1px solid #876060;
+  box-shadow: 0px 0px 3px #271e1e;
+  color: #ffffff;
+}
+#tray menu menuitem:hover {
+  background-image: linear-gradient(to bottom, #cc0000, #cc0000, #602222);
+  color: #ffffff;
+}
+
+#workspaces button:hover {
+  color: #CC0000;
+}
+#workspaces button.focused {
+  color: #0099CC;
+}
+#workspaces button.active {
+  color: #0099CC;
+}
 #workspaces button.urgent {
-  color: #fcb167;
+  color: #BA7B3E;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-  color: #00FF00;
-  background-color: #fc4649;
+  background: linear-gradient(to bottom, #CC0000, #660000);
 }
