@@ -8,9 +8,10 @@
   "margin-left": 0,
   "position": "bottom",
   "modules-left": [
+    "custom/applauncher",
+    "temperature",
     "cpu",
     "memory",
-    "temperature",
     "sway/workspaces"
   ],
   "modules-center": [
@@ -22,6 +23,7 @@
     "pulseaudio",
     "backlight",
     "custom/notification",
+    "privacy",
     "tray",
     "clock"
   ],
@@ -29,6 +31,39 @@
     "format": "",
     "on-click": "eww open powermenu && pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun && eww close powermenu",
     "tooltip": false
+  },
+  "privacy": {
+    "icon-spacing": 4,
+    "icon-size": 18,
+    "transition-duration": 250,
+    "modules": [
+      {
+        "type": "screenshare",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-out",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      },
+      {
+        "type": "audio-in",
+        "tooltip": true,
+        "tooltip-icon-size": 24
+      }
+    ],
+    "ignore-monitor": true,
+    "ignore": [
+      {
+        "type": "audio-in",
+        "name": "cava"
+      },
+      {
+        "type": "screenshare",
+        "name": "obs"
+      }
+    ]
   },
   "cpu": {
     "format": "{usage}% ",
@@ -106,8 +141,8 @@
         "car": "",
         "default": ["", "", ""]
     },
-    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-    "on-click-right": "pavucontrol",
+    "on-click": "pgrep pavucontrol >/dev/null 2>&1 && killall pavucontrol || pavucontrol -t 1",
+    "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip": true
   },
   "backlight": {
