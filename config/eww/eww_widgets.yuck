@@ -1,28 +1,39 @@
 (include "eww_vars.yuck")
 
 (defwidget powermenu []
-  (centerbox :height "68" :width "600" :halign "center" :valign "center" :class "parent"
-    (box :height "32" :width "144" :halign "center" :valign "center"
-      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
-        (button :onclick "systemctl poweroff" :class "poweroff-button"
+  (centerbox :height "68" :width "388" :halign "start" :valign "start" :class "parent"
+    (box :height "68" :width "130"
+      (box :height "32" :width "56" :halign "center" :valign "center" :class "child"
+        (button :onclick "systemctl poweroff" :class "button short shutdown"
           (label :class "icon-label"  :text "⏻")
         )
       )
-      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
-        (button :onclick "systemctl suspend"  :class "suspend-button"
-          (label :class "icon-label"  :text "⏾")
-        )
-      )
-      (box :height "32" :width "64" :halign "center" :valign "center" :class "child"
-        (button :onclick "swaymsg reload"  :class "refresh-button"
+      (box :height "32" :width "56" :halign "center" :valign "center" :class "child"
+        (button :onclick "swaymsg reload"  :class "button restart"
           (label :class "icon-label"  :text "↺")
         )
       )
     )
-    (box :height "32" :width "0" :halign "center" :valign "center" 
+
+    (box :height "68" :width "130"
+          (box :height "32" :width "56" :halign "center" :valign "center" :class "child"
+        (button :onclick "systemctl suspend"  :class "button short suspend"
+          (label :class "icon-label"  :text "⏾")
+        )
+      )
+      (box :height "32" :width "56" :halign "center" :valign "center" :class "child"
+        (button :onclick "systemctl suspend"  :class "button tall logout"
+          (label :class "icon-label"  :text "➜]")
+        )
+      )
     )
-    (box :height "32" :width "452" :halign "center" :valign "center" 
-      (label :class "flavour-text" :text FORTUNE)
+
+    (box :height "68" :width "100"
+      (box :height "32" :width "112" :halign "center" :valign "center" :class "child"
+        (button :class ""
+          (label :class "icon-label"  :text "img?")
+        )
+      )
     )
   )
 )
