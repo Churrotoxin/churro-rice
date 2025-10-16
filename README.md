@@ -1,17 +1,23 @@
 # Churro's rice
 
 My first rice/ personal setup.
-running on debian 12 :]
+running on debian 13 trixie :]
 
 ## apps
 
-- eww  (not available from apt, must be compiled from source)
+- eww  (compiled from source)
 - kitty
 - neofetch
 - sway
 - waybar
 - wofi
 - swaync
+- [uwuifyy](https://github.com/sgoudham/uwuifyy)
+
+## VSCode themes
+
+[Scoria](https://github.com/Zyplos/scoria)
+[Matrixish](https://marketplace.visualstudio.com/items?itemName=sjsepan.sjsepan-matrixish)
 
 ## font
 
